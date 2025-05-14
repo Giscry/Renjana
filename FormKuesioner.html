@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Untukmu, Renjanaku</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Georgia', serif;
+      background: linear-gradient(to bottom, #fff6f6, #fdfdfd);
+      color: #333;
+      line-height: 1.8;
+    }
+    .container {
+      max-width: 700px; /* Membatasi lebar kontainer agar tidak terlalu lebar */
+      margin: 0 auto;
+      padding: 40px 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 16px;
+      margin-top: 60px;
+      height: auto; /* Tidak ada pembatas tinggi */
+    }
+    h1 {
+      text-align: center;
+      color: #c0392b;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+    p {
+      margin-bottom: 16px;
+      text-align: justify;
+      color: #555; /* Warna abu-abu untuk teks */
+      word-wrap: break-word; /* Mencegah teks terlalu melebar */
+    }
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-style: italic;
+    }
+    audio {
+      display: block;
+      margin: 30px auto 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Untukmu, Renjanaku</h1>
+    <p>Hari ini, kulangitkan semua doa terbaik untukmu.
+    Semoga hal yang memuat kamu runtuh turut menjadi alasan kamu untuk bertumbuh.
+    Semoga dunia senantiasa menjaga kamu dimanapun kamu berada.
+    Semoga hari harimu selalu diiringi cinta yang tidak pernah ada batasnya.
+    Dan semoga senyum orang tuamu yang selalu kamu usahakan itu terlaksana,
+    walau mungkin belum sekarang, tapi pasti suatu saat.</p>
+
+    <p>Teruslah tumbuh, teruslah melangkah, dan berbahagialah.
+    Jika nantinya kau merasa sendiri, ingatlah aku selalu mendukungmu dari kejauhan
+    dan selalu berdoa kau kuat menghadapi semuanya.</p>
+
+    <p>Aku akan selalu bangga atas setiap proses yang kamu lalui.
+    Sejatinya aku akan selalu mencintaimu hingga nanti Tuhan sendiri
+    yang akan menghilangkan rasaku padamu.</p>
+
+    <p>Selamat berkelana, renjanaku.
+    Selamat tinggal, ini dayaku yang terakhir.
+    Sekali lagi aku akan selalu mendukungmu dari kejauhan yang hampa ini.</p>
+
+    <div class="footer">
+      <p>Loved you.</p>
+    </div>
+
+    <audio id="bg-music" controls autoplay loop muted>
+      <source src="https://media.vocaroo.com/mp3/1nh1rVBOpCJt" type="audio/mpeg">
+      Browser kamu tidak mendukung pemutar audio.
+    </audio>
+  </div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const audio = document.getElementById('bg-music');
+      audio.muted = false;
+      const playAudio = () => {
+        audio.play().catch(() => {});
+      };
+      playAudio();
+      document.body.addEventListener('click', playAudio, { once: true });
+    });
+  </script>
+</body>
+</html>
